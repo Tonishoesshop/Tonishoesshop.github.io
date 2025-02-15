@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Toni's Shoe Shop</title>
+  <style>
+    /* Tổng thể */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #F8FBFF; /* Nền chính sáng */
+      color: #444444; /* Màu chữ dễ đọc */
+      line-height: 1.6;
+      scroll-behavior: smooth; /* Tạo hiệu ứng cuộn mượt mà */
+    }
+
+    header {
+      background-image: url('jordan.jpeg'); /* Thay ảnh nền */
+      background-size: cover; /* Đảm bảo ảnh phủ kín */
+      background-position: center; /* Căn giữa ảnh */
+      color: #FFFFFF; /* Màu chữ */
+      padding: 60px 20px;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    header h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Đổ bóng chữ */
+    }
+
+    header p {
+      font-size: 1.2em;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Đổ bóng chữ */
+    }
+
+    nav {
+      background-color: #A7C7E7; /* Xanh pastel */
+      padding: 5px 60px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .logo img {
+      height: 80px;
+      width: auto;
+    }
+
+    nav a {
+      color: #444444;
+      text-decoration: none;
+      margin: 0 30px;
+      font-weight: bold;
+      font-size: 1.25em;
+    }
+
+    nav a:hover {
+      color: #FFC1CC; /* Hồng phấn khi hover */
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #555;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* Luôn có 3 sản phẩm trên 1 hàng */
+      gap: 20px;
+    }
+
+    .product {
+      background: #FFFFFF; /* Nền trắng sáng */
+      border: 1px solid #D8F3DC; /* Viền xanh lá nhạt */
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      padding: 15px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .product:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .product img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+
+    .btn {
+  background-color: #A7C7E7; /* Xanh pastel */
+  color: #FFFFFF;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-decoration: none; /* Loại bỏ gạch chân */
+  display: inline-block; /* Giữ định dạng như nút bấm */
+}
+    .btn:hover {
+      background-color: #FFC1CC; /* Hồng phấn khi hover */
+    }
+
+    footer {
+      background: #A7C7E7; /* Xanh pastel nhẹ */
+      color: #FFFFFF;
+      text-align: center;
+      padding: 10px 0;
+      margin-top: 30px;
+      font-size: 0.9em;
+    }
+
+    .welcome-box {
+      background: #FFFFFF; /* Nền trắng */
+      border-radius: 8px; /* Bo tròn góc */
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Hiệu ứng đổ bóng */
+      padding: 20px;
+      margin: 30px auto;
+      max-width: 900px;
+      text-align: left;
+    }
+.contact {
+      background: #FFFFFF; /* Nền trắng */
+      border-radius: 8px; /* Bo tròn góc */
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Hiệu ứng đổ bóng */
+      padding: 20px;
+      margin: 30px auto;
+      max-width: 900px;
+      text-align: center;
+    }
+
+    .welcome-box h2, .contact h2 {
+      color: #555;
+      margin-bottom: 15px;
+    }
+
+    .welcome-box p, .contact p {
+      color: #555;
+      font-size: 1.1em;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 768px) {
+      .product-grid {
+        grid-template-columns: repeat(2, 1fr); /* Hiển thị 2 cột trên màn hình nhỏ */
+      }
+    }
+
+    @media (max-width: 480px) {
+      .product-grid {
+        grid-template-columns: 1fr; /* Hiển thị 1 cột trên màn hình rất nhỏ */
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Toni's Shoes Shop</h1>
+    <p>Discover the best deals on high-quality shoes today!</p>
+  </header>
+
+  <nav>
+    <div class="logo">
+      <img src="logo.jpeg" alt="Shop Logo">
+    </div>
+    <a href="#home">Home</a>
+    <a href="#products">Products</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- Phần Welcome -->
+  <div id="home" class="welcome-box">
+    <h2>Welcome to Our Shop!</h2>
+    <p>
+      Welcome to Toni's Shoes Shop, where style meets comfort and quality! 
+      We take pride in offering an extensive collection of footwear that 
+      caters to every occasion, personality, and lifestyle.
+    </p>
+    <p>
+      Explore exclusive deals and seasonal discounts today! Step into a world 
+      of endless possibilities and let us help you find the perfect shoes 
+      to express your unique style.
+    </p>
+  </div>
+
+  <!-- Phần Products -->
+  <div id="products" class="container">
+    <h2>Products</h2>
+    <div class="product-grid">
+<div class="product">
+  <img src="travisscott.jpeg" width="60%" alt="Product 1">
+  <h3>Air Jordan 1 X Travis Scott</h3>
+  <p>Price: $1999</p>
+  <a href="travis.html" class="btn">Review</a>
+</div>
+
+<div class="product">
+  <img src="dior.jpeg" width="60%" alt="Product 2">
+  <h3>Air Jordan 1 X Dior</h3>
+  <p>Price: $2999</p>
+  <a href="dior.html" class="btn">Review</a>
+</div>
+
+<div class="product">
+  <img src="offwhite.jpeg" width="60%" alt="Product 3">
+  <h3>Air Jordan 1 X Off White</h3>
+  <p>Price: $3999</p>
+  <a href="offwhite.html" class="btn">Review</a>
+</div>
+
+    </div>
+  </div>
+
+  <!-- Phần Contact -->
+  <div id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <p>Email: tonydoan21032008@gmail.com</p>
+    <p>Phone: 0981951884</p>
+    <p>Address: Thanh Xuan Trung, Thanh Xuan, Ha Noi</p>
+  </div>
+
+  <footer>
+    <p>© 2025 Online Shop. All rights reserved.</p>
+    <p>Contact: tonydoan21032008@gmail.com | Phone: 0981951884</p>
+  </footer>
+</body>
+</html>

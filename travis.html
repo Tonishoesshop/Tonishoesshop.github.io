@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jordan 1 X Travis Scott</title>
+  <style>
+    /* Tổng thể */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #F8FBFF;
+      color: #444444;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+
+    
+    header h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    }
+
+    nav {
+      background-color: #A7C7E7;
+      padding: 5px 60px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .logo img {
+      height: 80px;
+      width: auto;
+    }
+
+    nav a {
+      color: #444444;
+      text-decoration: none;
+      margin: 0 30px;
+      font-weight: bold;
+      font-size: 1.25em;
+    }
+
+    nav a:hover {
+      color: #FFC1CC;
+    }
+
+    /* Container sản phẩm */
+    .container {
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 20px;
+      background: #FFFFFF;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      text-align: left;
+    }
+
+    .slider {
+      position: relative;
+      width: 50%;
+      max-width: 600px;
+      overflow: hidden;
+      margin: 20px auto;
+    }
+
+    .slides {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .slides img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    /* Nút điều hướng slider */
+    .slider-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.5);
+      color: #FFF;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      border-radius: 50%;
+      font-size: 1.2em;
+    }
+
+    .slider-btn.left {
+      left: 10px;
+    }
+
+    .slider-btn.right {
+      right: 10px;
+    }
+
+    .description {
+      font-size: 1em;
+      color: #666;
+      margin: 20px 0;
+    }
+
+    .btn {
+      background-color: #A7C7E7;
+      color: #FFF;
+      padding: 10px 20px;
+      text-decoration: none;
+      font-size: 1em;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #FFC1CC;
+    }
+
+    /* Ảnh quảng cáo ở hai bên */
+    .ads-container {
+      position: fixed;
+      top: 50%;
+      transform: translateY(-50%);
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      pointer-events: none;
+    }
+
+    .ad-left, .ad-right {
+      width: 120px;
+      height: 300px;
+      overflow: hidden;
+      pointer-events: auto;
+    }
+
+    .ad-left img, .ad-right img {
+      width: 100%;
+      height: auto;
+      animation: scrollAd 10s linear infinite;
+    }
+
+    .ad-right {
+      text-align: right;
+    }
+
+    @keyframes scrollAd {
+      0% {
+        transform: translateY(0);
+      }
+      100% {
+        transform: translateY(-100%);
+      }
+    }
+
+    footer {
+      background: #A7C7E7;
+      color: #FFFFFF;
+      text-align: center;
+      padding: 10px 0;
+      margin-top: 30px;
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+<body>
+
+
+  <nav>
+    <div class="logo">
+      <img src="logo.jpeg" alt="Shop Logo">
+    </div>
+    <a href="index.html">Home</a>
+    <a href="index.html">Products</a>
+    <a href="index.html">Contact</a>
+  </nav>
+
+  <!-- Ảnh quảng cáo cuộn -->
+  <div class="ads-container">
+    <div class="ad-left">
+      <img src="ad1.jpg" alt="Ad 1">
+    </div>
+    <div class="ad-right">
+      <img src="ad2.jpg" alt="Ad 2">
+    </div>
+  </div>
+
+  <div class="container">
+    <h2>Travis Scott x Nike Air Jordan 1 Retro High OG 'Mocha'</h2>
+    <div class="slider">
+      <div class="slides">
+        <img src="travis1.jpeg" alt="Jordan 1 Travis Scott - Image 1">
+        <img src="travis2.jpeg" alt="Jordan 1 Travis Scott - Image 2">
+        <img src="travis3.jpeg" alt="Jordan 1 Travis Scott - Image 3">
+      </div>
+      <button class="slider-btn left" onclick="prevSlide()">&#10094;</button>
+      <button class="slider-btn right" onclick="nextSlide()">&#10095;</button>
+    </div>
+
+    <p class="description">
+            As a die-hard fan of Travis Scott, you're surely no stranger to his iconic collaborations with Jordan Brand, right? In that case, you definitely can't miss out on the one-of-a-kind masterpiece, the <strong>Travis Scott x Nike Air Jordan 1 Retro High OG 'Mocha'</strong>! Even before its release, this <strong>Travis Scott Jordan 1</strong> proved its hype by being a must-have for the sneaker community, making waves across major news outlets and global social media platforms.
+<br>
+<br>
+      Sporting an earthy brown color scheme, this <strong>Jordan 1 Travis Scott</strong> features a Red Nike tag and Cactus Jack branding on the tongue. The standout detail of this Nike x Air Jordan 1 is its reversed Nike Swoosh embroidered on the lateral side, along with a hidden velcro stash pocket inside the lining. Other highlights include the “Cactus Jack” logo behind the Swoosh on the medial side and an embossed face logo on the heel.
+<br>
+<br>
+      Aside from its minimalist yet striking color palette, the <strong>Air Jordan 1 Travis Scott</strong> is equipped with Nike Air cushioning extending from toe to heel, ensuring comfort and flexibility for any activity—even on the court. Whether you're a seasoned Jordan collector or just stepping into the sneaker game, there's no denying that the <strong>Jordan 1 High Travis Scott</strong> deserves a spot in your collection!
+
+
+    </p>
+    <h3>Product Details</h3>
+    <p><strong>Release Date:</strong> 11/05/2019</p>
+    <p><strong>Brand:</strong> Jordan Brand</p>
+    <p><strong>Design:</strong> Air Jordan 1 High</p>
+    <p><strong>Product Code:</strong> CD4487-100</p>
+<br>
+    <a href="travis1.html" class="btn">Buy Now</a>
+  </div>
+
+  <footer>
+    <p>© 2025 Online Shop. All rights reserved.</p>
+    <p>Contact: tonydoan21032008@gmail.com | Phone: 0981951884</p>
+  </footer>
+
+  <script>
+    const slides = document.querySelector('.slides');
+    const totalSlides = slides.children.length;
+    let index = 0;
+
+    function showSlide() {
+      slides.style.transform = `translateX(-${index * 100}%)`;
+    }
+
+    function nextSlide() {
+      index = (index + 1) % totalSlides;
+      showSlide();
+    }
+
+    function prevSlide() {
+      index = (index - 1 + totalSlides) % totalSlides;
+      showSlide();
+    }
+  </script>
+</body>
+</html>

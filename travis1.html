@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travis Scott x Nike Air Jordan 1 Retro High OG 'Mocha'</title>
+  <style>
+    /* Tổng thể */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  background-color: #F8FBFF;
+  color: #444444;
+}
+
+header h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+/* Navbar */
+nav {
+  background-color: #A7C7E7;
+  padding: 5px 60px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+  height: 80px;
+  width: auto;
+}
+
+nav a {
+  color: #444444;
+  text-decoration: none;
+  margin: 0 30px;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+nav a:hover {
+  color: #FFC1CC;
+}
+
+/* Container chính */
+.container {
+  max-width: 1200px;
+  margin: 30px auto;
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  flex-wrap: wrap; /* Để đảm bảo không bị dư khoảng trống */
+}
+
+/* Sidebar hình ảnh */
+.image-gallery {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.thumbnail img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: transform 0.3s ease;
+}
+
+.thumbnail img:hover {
+  transform: scale(1.1);
+}
+
+.main-image img {
+margin-left:-100px;
+  max-width: 100%; /* Đảm bảo ảnh không vượt quá container */
+  height: auto; /* Tỷ lệ ảnh tự điều chỉnh */
+  width: 600px; /* Đặt chiều rộng cố định (có thể thay đổi tùy nhu cầu) */
+  border-radius: 8px; /* Bo góc ảnh */
+  object-fit: contain; /* Đảm bảo ảnh được co lại phù hợp */
+}
+/* Chi tiết sản phẩm */
+.product-details {
+  flex: 2;
+  min-width: 300px; /* Đảm bảo chiều rộng tối thiểu */
+}
+
+.product-details h1 {
+  font-size: 1.8em;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.product-details .price {
+  font-size: 1.5em;
+  color: #A7C7E7;
+  margin-bottom: 20px;
+}
+
+.sizes {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.sizes span {
+  display: inline-block;
+  margin: 5px;
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.sizes span:hover {
+  background-color: #ffc1cc;
+  color: #fff;
+  border-color: #ffc1cc;
+}
+
+.sizes span.selected {
+  background-color: #A7C7E7;
+  color: #fff;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #A7C7E7;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1em;
+  font-weight: bold;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #ffc1cc;
+}
+
+/* Footer */
+footer {
+  background: #A7C7E7;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 30px;
+  font-size: 0.9em;
+}
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo">
+      <img src="logo.jpeg" alt="Shop Logo">
+    </div>
+        <a href="index.html">Home</a>
+    <a href="index.html">Products</a>
+    <a href="index.html">Contact</a>  </nav>
+  <div class="container">
+    <!-- Phần hình ảnh -->
+    <div class="image-gallery">
+<div class="thumbnail">
+        <img src="tra1.jpeg" alt="Thumbnail 1">
+      </div>
+      <div class="thumbnail">
+        <img src="tra2.jpeg" alt="Thumbnail 1">
+      </div>
+      <div class="thumbnail">
+        <img src="tra3.jpeg" alt="Thumbnail 2">
+      </div>
+      <div class="thumbnail">
+        <img src="tra4.jpeg" alt="Thumbnail 3">
+      </div>
+    </div>
+    <div class="main-image">
+      <img src="tra1.jpeg" alt="Main Product Image">
+    </div>
+
+    <!-- Phần chi tiết sản phẩm -->
+    <div class="product-details">
+      <h1>Travis Scott x Nike Air Jordan 1 Retro High OG 'Mocha'</h1>
+      <p class="price">$1999</p>
+
+      <div class="sizes">
+        <h3>Size</h3>
+        <span>37.5</span>
+        <span>38</span>
+        <span>38.5</span>
+        <span>39</span>
+        <span>40</span>
+        <span>41</span>
+        <span>42</span>
+        <span>42.5</span>
+        <span>43</span>
+        <span>44</span>
+      </div>
+
+      <a href="paytra.html" class="btn">Order</a>
+    </div>
+  </div>
+  <footer>
+    <p>© 2025 Online Shop. All rights reserved.</p>
+    <p>Contact: tonydoan21032008@gmail.com | Phone: 0981951884</p>
+  </footer>
+<script>
+  // Chọn tất cả các ảnh thumbnail và ảnh chính
+  const thumbnails = document.querySelectorAll('.thumbnail img');
+  const mainImage = document.querySelector('.main-image img');
+
+  // Lặp qua từng ảnh thumbnail
+  thumbnails.forEach(thumbnail => {
+    thumbnail.addEventListener('click', () => {
+      // Đổi nguồn (src) của ảnh chính thành src của ảnh thumbnail được nhấp vào
+      mainImage.src = thumbnail.src;
+
+      // Thêm hiệu ứng highlight cho thumbnail được chọn
+      thumbnails.forEach(img => img.classList.remove('selected'));
+      thumbnail.classList.add('selected');
+    });
+  });
+</script>
+
+</body>
+</html>
+

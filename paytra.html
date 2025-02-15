@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thanh Toán</title>
+  <style>
+    /* Tổng thể */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #F8FBFF;
+      color: #444444;
+      margin: 0;
+      padding: 0;
+    }
+ header {
+      background-image: url('jordan.jpeg'); /* Thay ảnh nền */
+      background-size: cover; /* Đảm bảo ảnh phủ kín */
+      background-position: center; /* Căn giữa ảnh */
+      color: #FFFFFF; /* Màu chữ */
+      padding: 60px 20px;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    header h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Đổ bóng chữ */
+    }
+
+    header p {
+      font-size: 1.2em;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Đổ bóng chữ */
+    }
+
+    nav {
+      background-color: #A7C7E7; /* Xanh pastel */
+      padding: 5px 60px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .logo img {
+      height: 80px;
+      width: auto;
+    }
+
+    nav a {
+      color: #444444;
+      text-decoration: none;
+      margin: 0 30px;
+      font-weight: bold;
+      font-size: 1.25em;
+    }
+
+    nav a:hover {
+      color: #FFC1CC; /* Hồng phấn khi hover */
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 30px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+      color: #222;
+    }
+
+    label {
+      display: block;
+      font-weight: bold;
+      margin: 15px 0 5px;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+
+    input[type="radio"] {
+      width: auto;
+      margin-right: 10px;
+    }
+
+    button {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      background-color: #A7C7E7;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #ffc1cc;
+    }
+
+    .summary {
+      margin-top: 20px;
+      padding: 15px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      background-color: #f9f9f9;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo">
+      <img src="logo.jpeg" alt="Shop Logo">
+    </div>
+ <a href="index.html">Home</a>
+    <a href="index.html">Products</a>
+    <a href="index.html">Contact</a>
+  </nav>
+
+  <div class="container">
+    <h1>Thanh Toán</h1>
+    <form id="checkoutForm">
+      <!-- Thông tin cá nhân -->
+      <label for="name">Họ và Tên:</label>
+      <input type="text" id="name" name="name" placeholder="Nhập họ và tên" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="Nhập email" required>
+
+      <label for="address">Địa chỉ:</label>
+      <textarea id="address" name="address" placeholder="Nhập địa chỉ giao hàng" required></textarea>
+
+      <label for="phone">Số điện thoại:</label>
+      <input type="tel" id="phone" name="phone" placeholder="Nhập số điện thoại" required>
+
+      <!-- Phương thức thanh toán -->
+      <label>Phương thức thanh toán:</label>
+      <input type="radio" id="cod" name="payment" value="COD" checked>
+      <label for="cod">Thanh toán khi nhận hàng (COD)</label><br>
+      <input type="radio" id="bank" name="payment" value="Bank">
+      <label for="bank">Chuyển khoản ngân hàng</label>
+
+      <!-- Tổng tiền -->
+      <div class="summary">
+        <strong>Tổng tiền: </strong> <span id="totalPrice">$1999</span>
+      </div>
+
+      <!-- Nút Thanh Toán -->
+      <button type="button" onclick="submitOrder()">Xác nhận Thanh Toán</button>
+    </form>
+  </div>
+
+  <script>
+    function submitOrder() {
+      // Lấy dữ liệu từ form
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const address = document.getElementById('address').value;
+      const phone = document.getElementById('phone').value;
+      const paymentMethod = document.querySelector('input[name="payment"]:checked').value;
+
+      // Kiểm tra thông tin người dùng
+      if (!name || !email || !address || !phone) {
+        alert('Vui lòng nhập đầy đủ thông tin!');
+        return;
+      }
+
+      // Hiển thị xác nhận đơn hàng
+      const confirmationMessage = `
+        Xác nhận đơn hàng:
+        ----------------------------
+        Họ và Tên: ${name}
+        Email: ${email}
+        Địa chỉ: ${address}
+        Số điện thoại: ${phone}
+        Phương thức thanh toán: ${paymentMethod}
+        Tổng tiền: $1999
+      `;
+      alert(confirmationMessage);
+
+      // Reset form
+      document.getElementById('checkoutForm').reset();
+    }
+  </script>
+</body>
+</html>
